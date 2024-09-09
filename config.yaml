@@ -1,0 +1,37 @@
+ 
+# RMF door adapter parameters
+
+### template ###
+
+api:
+  appId: "68518620319745" 
+  appSecret: "8288EC12D8CFC60D"
+  appCode: “00004V3”
+## Test api,change them if neccessary
+
+door_subscriber:
+  topic_name: "adapter_door_requests"
+
+door_supervisor_heartbeat_publisher:
+  topic_name: "door_supervisor_heartbeat"
+
+door_publisher:
+  topic_name: "door_states"
+  door_state_publish_period: 1.0 # Seconds
+  
+door_requests_publisher:
+  topic_name: "door_requests"
+## Neccessary publisher and subscriber infomation
+
+robot: 
+    - {robotId: '000058062236',requester_id: 'tinyRobot/tinyRobot1',token: ''}
+    - {robotId: '000058060279',requester_id: 'tinyRobot/tinyRobot2',token: ''}
+    - {robotId: '000058069743',requester_id: 'door_panel_requester',token: ''}
+## Map from requester_id to robotId
+
+doorinfo: 
+    - {door_name: 'coe_door',states: 0,check: 0,error: 0,deviceUnique: '0000580620003',delay: 0,robotId: '',count: 0,token: ''}
+    - {door_name: 'hardware_door',states: 0,check: 0,error: 0,deviceUnique: '0000580620001',delay: 0,robotId: '',count: 0,token: ''}
+    - {door_name: 'main_door',states: 0,check: 0,error: 0,deviceUnique: '0000580620002',delay: 0,robotId: '',count: 0,token: ''}
+## Neccessary door infomation
+
